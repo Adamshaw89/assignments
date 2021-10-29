@@ -1,0 +1,220 @@
+body {
+    background-color: black;
+}
+.container{
+    margin: 10px;
+   
+}
+
+.french1{
+    height: 200px;
+    width: 100px;
+    background-color: #002495;    
+    display: inline-block;
+}
+
+.french2{
+    height: 200px;
+    width: 100px;
+    background-color: #FFFFFF;  
+    display: inline-block;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+.french3{
+    height: 200px;
+    width: 100px;
+    background-color: #ED2938;    
+    display: inline-block;
+}
+
+.container2{
+    margin: 10px;
+}
+
+.german1{
+    height: 66.6px;
+    width: 333px;
+    background-color:#000000;
+}
+
+.german2{
+    height: 66.6px;
+    width: 333px;
+    background-color:#DE0002 ;
+}
+
+.german3{
+    height: 66.6px;
+    width: 333px;
+    background-color: #FFCE00;
+}
+
+.container3 { 
+    background-color: #FFFFFF; 
+    position: relative;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+}
+
+.madagascar1 {
+    background-color: #FC3E32;
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    
+}
+
+.madagascar2 {
+    background-color: #007E39;
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.container4{
+    background-color: #FF0002;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    margin: 10px;
+}
+
+.switzerland1{
+    background-color: #FFFFFF;
+    height: 180px;
+    width: 77px;
+    position: absolute;
+    top: 60px;
+    left: 111.5px;
+}
+
+.switzerland2{
+    background-color: #FFFFFF;
+    height: 77px;
+    width: 180px;
+    position: absolute;
+    top: 111.5px;
+    left: 60px;
+}
+
+.container5{
+    background-color: #0269A6;
+    height: 187.5px;
+    width: 300px;
+    position: relative;
+    margin: 10px;
+}
+
+.sweden1{
+    background-color: #FECC00;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 73px;
+
+
+}
+
+.sweden2{
+    background-color: #FECC00;
+    height: 100%;
+    width: 50px;
+    position: absolute;
+    left: 95px;
+
+}
+
+.container6{
+    margin: 10px;
+}
+
+.gambia1{
+    background-color: #CE1127;
+    height: 66.6px;
+    width: 300px;
+}
+
+.gambia2{
+    background-color:  #FFFFFF;
+    height: 6.7px;
+    width: 300px;
+}
+
+.gambia3{
+    background-color: #0D1D8B;
+    height: 53.4px;
+    width: 300px;
+}
+
+.gambia4{
+    background-color:  #FFFFFF;
+    height: 6.7px;
+    width: 300px;
+}
+
+.gambia5{
+    background-color:  #3B7827;
+    height: 66.6px;
+    width: 300px;
+}
+
+.container7{
+    background-color: #FFFFFF;
+    height: 200px;
+    width: 300px;
+    position: relative;
+    margin: 10px;
+    
+}
+
+.japan1{
+    background-color: #BC022C;
+    border-radius: 50%;
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    left: 85px;
+    top: 45px;
+    
+}
+
+
+
+.container8{
+    background-color: white;
+    height: 257px;
+    width: 300px;
+    position: relative;
+    margin: 10px;
+}
+
+.niger1{
+    background-color: #E15307;
+    height: 33.3%;
+    width: 100%;
+}
+
+.niger2{
+    background-color: #E15307;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 115px;
+    margin-top: 7px;
+}
+
+.niger3{
+    background-color: #10AF2A;
+    height: 33.3%;
+    width: 100%;
+    position: absolute;
+    top: 66.6%;
+}

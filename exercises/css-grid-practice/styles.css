@@ -1,0 +1,113 @@
+body{
+    background-color: black;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1111px) {
+    .grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 100px auto 100px 100px;
+    }
+}
+
+@media screen and (min-width: 1111px) {
+    .grid-container{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    
+}
+
+header{
+    background-color: aqua;
+    grid-column: 1/span5;
+    font-size: 1.5em;
+    color: aliceblue;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+}
+
+.sidebar{
+    background-color: blueviolet;
+    grid-column: 1/span5;
+    font-size: 1.5em;
+    color: aliceblue;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1111px) {
+    .sidebar{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+}
+
+@media screen and (min-width: 1111px) {
+    .sidebar{
+        grid-column: 1/2;
+        grid-row: 2/4;
+    }
+}
+.content{
+    background-color: blueviolet;
+    grid-column: 1/span5;
+    grid-row: 3/5;
+    font-size: 1.5em;
+    color: aliceblue;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1111px) {
+    .content{
+        grid-column: 2/-1;
+        grid-row: 2/3;
+    }
+}
+
+@media screen and (min-width: 1111px) {
+    .content{
+        grid-row: 2/4;
+        grid-column: 2/4;
+    }
+    
+}
+
+.sidebar2{
+    background-color: coral;
+    grid-column: 1/span5;
+    font-size: 1.5em;
+    color: aliceblue;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 1111px) {
+    .sidebar2{
+        grid-row: 2/4;
+        grid-column: 4/5;
+    }
+    
+}
+
+footer{
+    background-color: cornflowerblue;
+    grid-column: 1/span5;
+    font-size: 1.5em;
+    color: aliceblue;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+
+}
