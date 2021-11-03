@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+}
+
+#page{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.square{
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    
+    
+}
