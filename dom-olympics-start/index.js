@@ -1,10 +1,22 @@
 let header = document.getElementById("header");
 
-header.innerHTML = "<h1>JavaScript Made This!!</h1> <h2><span id = 'myName'> Adam</span> wrote the JavaScript.</h2>"
+let title1 = document.createElement("h1");
 
-let myName = document.getElementById("myName");
+title1.textContent = "JavaScript Made This!!";
+
+let title2 = document.createElement("h2");
+
+title2.textContent = "wrote the JavaScript.";
+
+let myName = document.createElement("span");
+
+myName.textContent = "Adam Shaw ";
 
 myName.style.color = "peachpuff";
+
+header.append(title1, title2);
+
+title2.prepend(myName);
 
 let message = document.getElementsByClassName("message");
 
