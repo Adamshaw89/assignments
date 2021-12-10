@@ -4,6 +4,9 @@ body{
 }
 input{
     background-color: rgb(19, 18, 18);
+    color: #5204BF;
+    box-shadow: .25em .25em .25em #5204BF;
+    margin: 5px;
 }
 button{
     background-color: rgb(19, 18, 18);
