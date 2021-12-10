@@ -17,11 +17,13 @@ function listData(data){
         const p2 = document.createElement('p');
         const p3 = document.createElement('p');
         const image = document.createElement('img');
-        const edit = document.createElement('button');
+        let edit = document.createElement('button');
         var del = document.createElement('button');
         let checker = document.createElement("input")
         checker.setAttribute("type", "checkbox")
         checker.setAttribute("name", "check")
+        let save = document.createElement("button");
+        save.textContent = "Save"
         let list = document.getElementById("list")
         let id = data[i]._id
         del.setAttribute("id", "del");
@@ -36,6 +38,9 @@ function listData(data){
         p3.textContent = `Completed: ${data[i].completed}`
         li.append(image, h3, p1, p2, p3, checker, edit, del)
         list.append(li);
+       
+       
+        
         del.addEventListener("click", function(e){
             var item = e.target.parentElement
             console.log("Item trying to delete: ",item)
@@ -45,6 +50,7 @@ function listData(data){
         checker.addEventListener("click",function(){
             if (checker.checked){
                 h3.innerHTML = `<strike>${data[i].title}</strike>`
+                p3.textContent = `Completed: true`
                 let complete = {
                     completed: true
                 }
@@ -55,8 +61,14 @@ function listData(data){
         })
 
         edit.addEventListener("click", function(){
-            editing(h3, p1, p2, id)
+            edit.remove()
+            li.append(save)
+            // This only works on the second li?
+            //li.insertBefore(save, del) 
+            editing(h3, p1, p2, id, save, li, edit)
         })
+
+        
     }    
 
 
@@ -64,40 +76,54 @@ function listData(data){
     
 
 //edits
-function editing(h3, p1, p2, id){
-    let item = [];
-    item.push(h3, p1, p2);
-
+function editing(h3, p1, p2, id, save, li, edit){
+   // let item = [];
+    //item.push(h3, p1, p2);
+    
+    /*
     item.map(option =>{
         input = document.createElement("input");
-        button = document.createElement("button");
-        button.textContent = "Update"
         input.placeholder = option.textContent;
         option.textContent = "";
-        option.append(input, button);
+        option.append(input);
     })
-/*
+   */
+    
     input1 = document.createElement("input");
     input2 = document.createElement("input");
     input3 = document.createElement("input");
-    input4 = document.createElement("input");
-
     input1.placeholder = h3.textContent;
     input2.placeholder = p1.textContent;
     input3.placeholder = p2.textContent;
-    input4.placeholder = p3.textContent;
-
     h3.textContent = ""
     p1.textContent = ""
     p2.textContent = ""
-    p3.textContent = ""
-
     h3.append(input1);
     p1.append(input2);
     p2.append(input3);
-    p3.append(input4);
-*/ 
+    
+    save.addEventListener("click", function(){
+        save.remove()
+        // This only works on the second li?
+        //li.insertBefore(edit, del)
+        li.append(edit)
+        h3.textContent = input1.value;
+        p1.textContent = input2.value;
+        p2.textContent = input3.value;
+        let updates = {
+            title: input1.value,
+            description: input2.value,
+            price: input3.value
+    }
+    axios.put(`https://api.vschool.io/adamshaw/todo/${id}`, updates)
+    .then(response => console.log(response.data))
+    .catch(error => console.log(error))
+    })
 }
+
+
+   
+
 // deletes
 function deleting(id){
         console.log(id)
