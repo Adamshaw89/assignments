@@ -11,6 +11,7 @@ function listData(data){
     clearList()
     
     for(let i = 0; i < data.length; i++){
+        // ELEMENT CREATION
         const h3 = document.createElement('h3')
         const li = document.createElement('li')
         const p1 = document.createElement('p');
@@ -19,13 +20,14 @@ function listData(data){
         const image = document.createElement('img');
         let edit = document.createElement('button');
         var del = document.createElement('button');
-        let checker = document.createElement("input")
+        let checker = document.createElement("input");
+        let list = document.getElementById("list")
+        let id = data[i]._id
+        // CREATED ELEMENT ATTRIBUTES AND TEXT CONTENT
         checker.setAttribute("type", "checkbox")
         checker.setAttribute("name", "check")
         let save = document.createElement("button");
         save.textContent = "Save"
-        let list = document.getElementById("list")
-        let id = data[i]._id
         del.setAttribute("id", "del");
         edit.setAttribute("class", "edit");
         del.textContent = "Delete"
@@ -36,11 +38,10 @@ function listData(data){
         p1.textContent = data[i].description
         p2.textContent = `Price: ${data[i].price}`
         p3.textContent = `Completed: ${data[i].completed}`
+        // ADDING ELEMENTS TO DOM
         li.append(image, h3, p1, p2, p3, checker, edit, del)
         list.append(li);
-       
-       
-        
+        // BUTTON EVENT LISTENERS
         del.addEventListener("click", function(e){
             var item = e.target.parentElement
             console.log("Item trying to delete: ",item)
@@ -59,72 +60,46 @@ function listData(data){
                     .catch(error => console.log(error))
             }
         })
-
         edit.addEventListener("click", function(){
             edit.remove()
             li.append(save)
             // This only works on the second li?
             //li.insertBefore(save, del) 
-            editing(h3, p1, p2, id, save, li, edit)
+            input1 = document.createElement("input");
+            input2 = document.createElement("input");
+            input3 = document.createElement("input");
+            input1.placeholder = h3.textContent;
+            input2.placeholder = p1.textContent;
+            input3.placeholder = p2.textContent;
+            h3.textContent = ""
+            p1.textContent = ""
+            p2.textContent = ""
+            h3.append(input1);
+            p1.append(input2);
+            p2.append(input3);
+            
+            save.addEventListener("click", function(){
+                save.remove()
+                // This only works on the second li?
+                //li.insertBefore(edit, del)
+                li.append(edit)
+                h3.textContent = input1.value;
+                p1.textContent = input2.value;
+                p2.textContent = input3.value;
+                let updates = {
+                    title: input1.value,
+                    description: input2.value,
+                    price: input3.value
+            }
+            axios.put(`https://api.vschool.io/adamshaw/todo/${id}`, updates)
+            .then(response => console.log(response.data))
+            .catch(error => console.log(error))
         })
+        })
+           
+    }}   
 
-        
-    }    
-
-
-    }
-    
-
-//edits
-function editing(h3, p1, p2, id, save, li, edit){
-   // let item = [];
-    //item.push(h3, p1, p2);
-    
-    /*
-    item.map(option =>{
-        input = document.createElement("input");
-        input.placeholder = option.textContent;
-        option.textContent = "";
-        option.append(input);
-    })
-   */
-    
-    input1 = document.createElement("input");
-    input2 = document.createElement("input");
-    input3 = document.createElement("input");
-    input1.placeholder = h3.textContent;
-    input2.placeholder = p1.textContent;
-    input3.placeholder = p2.textContent;
-    h3.textContent = ""
-    p1.textContent = ""
-    p2.textContent = ""
-    h3.append(input1);
-    p1.append(input2);
-    p2.append(input3);
-    
-    save.addEventListener("click", function(){
-        save.remove()
-        // This only works on the second li?
-        //li.insertBefore(edit, del)
-        li.append(edit)
-        h3.textContent = input1.value;
-        p1.textContent = input2.value;
-        p2.textContent = input3.value;
-        let updates = {
-            title: input1.value,
-            description: input2.value,
-            price: input3.value
-    }
-    axios.put(`https://api.vschool.io/adamshaw/todo/${id}`, updates)
-    .then(response => console.log(response.data))
-    .catch(error => console.log(error))
-    })
-}
-
-
-   
-
-// deletes
+// DELETES
 function deleting(id){
         console.log(id)
             axios.delete(`https://api.vschool.io/adamshaw/todo/${id}`)
@@ -132,7 +107,7 @@ function deleting(id){
             .catch(error => console.log(error))
 }
 
-
+// PREVENTS LIST STACKING
 function clearList(){
     const element = document.getElementById('list')
     console.log(element)
@@ -142,13 +117,7 @@ function clearList(){
 }
 
 getData()
-
-
-
-
-
-
-
+// POSTING MAIN FORM INPUT
 const form = document.form
 const description = form.description
 const price = form.price
@@ -174,3 +143,15 @@ form.addEventListener("submit", function(e){
         .catch(err => console.log(err))
 })
 
+// I TRIED... FIGURE OUT NAMING AND HOW TO REFERENCE
+        // let item = [];
+            //item.push(h3, p1, p2);
+            
+            /*
+            item.map(option =>{
+                input = document.createElement("input");
+                input.placeholder = option.textContent;
+                option.textContent = "";
+                option.append(input);
+            })
+        */

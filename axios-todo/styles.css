@@ -2,6 +2,29 @@ body{
     background-color: black;
     color: #48038C;
 }
+input{
+    background-color: rgb(19, 18, 18);
+}
+button{
+    background-color: rgb(19, 18, 18);
+    box-shadow: .25em .25em .25em #F213A4;
+    text-shadow: .1em .1em .1em #F213A4;
+    margin: 10px;
+    color: #F213A4;
+    border: solid #F213A4 .2em;
+    border-radius: 20%;
+    padding: 1em;
+}
+button:hover{
+    box-shadow: .5em .5em .5em #f841b8;
+    border: solid #f841b8 .2em;
+    color: #f841b8;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+   
+}
 
 #container{
     display: grid;
@@ -16,12 +39,14 @@ body{
     display: flex; 
     flex-direction: column;
     align-content: center;
-
+    background-color: rgb(19, 18, 18);
+    box-shadow: 5px 5px 5px 5px #5204BF;
+    margin: 0;
 }
 
 #head{
     display: flex;
-    border: 5px solid blueviolet;
+    justify-content: center;
 }
 
 img{
@@ -33,5 +58,5 @@ img{
 }
 
 #del{
-    background-color: coral;
+    background-color: ;
 }
