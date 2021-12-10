@@ -5,8 +5,9 @@ const first = readline.questionFloat(["Please enter your first number. "])
 
 const second = readline.questionFloat(["Please enter your second number. "]);
 
-let operations = ['add', 'subtract', 'divide', 'multiply'],
-  choice = readline.keyInSelect(operations, 'Please enter the operation to perform?');
+let operations = ['add', 'subtract', 'divide', 'multiply'];
+  
+let choice = readline.keyInSelect(operations, 'Please enter the operation to perform?');
 
 if (operations[choice] == 'add'){
     console.log ("The result is " + add(first, second));

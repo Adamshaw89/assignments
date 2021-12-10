@@ -75,12 +75,19 @@ const themes = document.getElementById("theme-drop-down");
 
 themes.addEventListener("change", val);
 
-let values = "theme-one";
+//let values = "theme-one";
 let select = document.getElementsByTagName("select");
 
 function val() {
-    var values = themes.options.value;
-    return(values);
+    var values = themes.value;
+    console.log(themes)
+    console.log(themes.value)
+    if (values === "theme-one"){
+        blueBrown();
+        } else if (values === "theme-two"){
+            blackRed();
+    }
+    
 }
 
 function blueBrown(){
@@ -96,9 +103,3 @@ function blackRed(){
     left[0].style.backgroundColor = "black";
     left[1].style.backgroundColor = "black";
 }
-if (values === "theme-one"){
-    blueBrown();
-    } else if (values === "theme-two"){
-        blackRed();
-}
-

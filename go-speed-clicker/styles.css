@@ -1,0 +1,36 @@
+body{
+    background-color: black;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+h1{
+    color: blueviolet;
+}
+button{
+    height: 400px;
+    background-color: blueviolet;
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#count{
+    color: blueviolet;
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#timer{
+    color: blueviolet;
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#score{
+    color: blueviolet;
+    font-size: 1.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

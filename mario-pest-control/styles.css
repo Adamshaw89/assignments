@@ -1,0 +1,114 @@
+body{
+ background-image: url("https://images3.alphacoders.com/235/235967.jpg") ;
+    background-size: cover;
+   
+}
+
+.page{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 1fr 1fr 200px;
+    grid-gap: 10px;
+   
+}
+
+.mario{
+    border-radius: 50%;
+}
+
+
+.title{
+    font-size: 3rem;
+}
+
+.description{
+    width: 80%;
+}
+
+.baddie{
+    background-image: url("https://external-preview.redd.it/suBFLELNz5a025AbUWQajpioNAOY-9P5iPDvLthC5fw.jpg?auto=webp&s=92582418251f439f2568153949ca340b3f80d7ab");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    color:mintcream;
+    padding: 5px;
+}
+
+#container1{
+    grid-column: 1/4;
+    grid-row: 1;
+    background-image: url("https://external-preview.redd.it/suBFLELNz5a025AbUWQajpioNAOY-9P5iPDvLthC5fw.jpg?auto=webp&s=92582418251f439f2568153949ca340b3f80d7ab");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    color:mintcream;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container2{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    
+}
+
+.goomba{
+    border-radius: 10px;
+}
+
+#container3{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    
+}
+
+#container4{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    
+}
+
+#container5{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    
+}
+
+#container6{
+    grid-row: 4/5;
+    grid-column: 1/4;
+    background-image: url("https://external-preview.redd.it/suBFLELNz5a025AbUWQajpioNAOY-9P5iPDvLthC5fw.jpg?auto=webp&s=92582418251f439f2568153949ca340b3f80d7ab");
+    background-size: cover;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    color:mintcream;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+a{
+    text-decoration: none;
+    color:mintcream;
+}
+
+#total{
+    background-color: rgb(233, 233, 63);
+    color: mintcream;
+    height: 10%;
+    border: 5px dashed mintcream;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

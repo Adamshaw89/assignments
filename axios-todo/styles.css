@@ -1,0 +1,37 @@
+body{
+    background-color: black;
+    color: #48038C;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    
+}
+
+.location{
+    grid-column: 2/3;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    align-content: center;
+
+}
+
+#head{
+    display: flex;
+    border: 5px solid blueviolet;
+}
+
+img{
+    height: 100px;
+}
+
+.edit{
+
+}
+
+#del{
+    background-color: coral;
+}

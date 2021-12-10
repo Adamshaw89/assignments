@@ -1,0 +1,73 @@
+body{ 
+    background-color: darkslategrey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 10px;
+}
+
+.add{
+    background-color: darkorchid;
+    color: rgb(237, 241, 241);
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.subtract{
+    background-color: darkviolet;
+    color: rgb(237, 241, 241);
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.multiply{
+    background-color: darkmagenta;
+    color: rgb(237, 241, 241);
+    grid-column: 2/3;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#sum{
+
+}
+
+#difference{
+
+}
+
+#product{
+
+}
+
+.symbol{
+    font-size: 3em;
+    color: rgb(237, 241, 241);
+        
+    margin: 0;
+}
+
+input {
+    margin: 5px;
+}

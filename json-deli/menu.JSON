@@ -1,0 +1,84 @@
+
+
+{
+    "appetizers" : [
+        {
+        "name": "Nachos",
+        "ingredients": ["tortilla chips", "meat", "guac", "cheese"],
+        "description": "Delicious Nachos."
+        },
+        {
+        "name": "Mozerella Sticks",
+        "ingredients": ["Cheese", "Breading", "Cheese", "Cheese"],
+        "description": "Delicious Cheese sticks."
+        },
+        {
+        "name": "Nachos",
+        "ingredients": ["tortilla chips", "meat", "guac", "cheese"],
+        "description": "Delicious Nachos."
+        }
+    ],
+    "coldSandwiches": [
+        {
+            "name": "HTML",
+            "ingredients": [ "Ham", "Tomato", "Mayo", "Lettuce"],
+            "description": "Delicious Sammy."
+        },
+        {
+            "name": "CSS",
+            "ingredients": ["Corned Beef", "Salami", "Sharp Cheddar"],
+            "description": "Delicious Sammy."
+        },
+        {
+            "name": "HTTP",
+            "ingredients": ["Ham", "Tomato", "Tortilla", "Pickles"],
+            "description": "Delicious Sammy."
+        }
+    ],
+    "hotSandwhiches": [
+        {
+            "name": "JAVA",
+            "ingredients": ["Jalapeno", "Aoli", "Veggies", "Avacado"],
+            "description": "Delicious Sammy."
+        },
+        {
+            "name": "JS",
+            "ingredients": ["Jalapeno", "Salami"],
+            "description": "Delicious Sammy."
+        },
+        {
+            "name": "MONGO",
+            "ingredients": ["Mayo", "ONion", "Goat Cheese", "Oil"],
+            "description": "Delicious Sammy."
+        }
+    ],
+    "desserts" : [
+        {
+            "name": "CRUD",
+            "ingredients": ["Choclate", "Rocky Road", "Upside Down Cake", "Dirt Cake"],
+            "description": "Delicious Dessert."
+        },
+        {
+            "name": "TAG",
+            "ingredients": ["Tangerine", "Any Flavor", "Ginger bread"],
+            "description": "Delicious Dessert."
+        },
+        {
+            "name": "P",
+            "ingredients": ["Peanut Butter", "Ice Cream"],
+            "description": "Delicious Dessert."
+        }
+    ],
+    "drinks" : [
+        {
+            "name": "HTML",
+            "ingredients": ["Hot", "Tea", "Made", "Local"],
+            "description": "Delicious Tea."
+        },
+        {
+            "name": "JAVA",
+            "ingredients": ["Coffee", "Coffee", "Coffee"],
+            "description": "Delicious Coffee."
+        }
+    ]
+}

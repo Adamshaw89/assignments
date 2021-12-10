@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+       
+        <title>Simple Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <div id = "container">
+      <div class = "add">
+        <h2>Addition</h2>
+        <form name = "add">
+          <label for="add1">First number</label><br>  
+          <input type = "number" name="add1"/><br>
+          <p class = "symbol">+</p>
+          <label for="add2">Second number</label><br>
+          <input type = "number" name="add2"/><br>
+          <button id = "add-submit">Submit</button>
+          <p id = "sum"></p>
+        </form>
+      </div>
+      <div class = "subtract">
+         <h2>Subtraction</h2>
+        <form name="sub">
+          <label for="sub1">First number</label><br>
+          <input type = "number" name="sub1"/><br>
+          <p class = "symbol">-</p>
+          <label for="sub2">Second number</label><br>
+          <input type = "number" name="sub2"/><br>
+          <button id = "subtract-submit">Submit</button>
+          <p id = "difference"></p>
+        </form>
+      </div>
+      <div class = "multiply">
+        <h2>Multiplication</h2>
+        <form name="multiply">
+          <label for="mul1">First number</label><br>
+          <input type = "number" name="mul1"/><br>
+          <p class = "symbol">x</p>
+          <label for="mul2">Second number</label><br>
+          <input type = "number" name="mul2"/><br>
+          <button id = "multiply-submit">Submit</button>
+          <p id = "product"></p>
+        </form>
+      </div>  
+      </div>
+      <script src="main.js"></script>
+      
+      
+    </body>
+</html>

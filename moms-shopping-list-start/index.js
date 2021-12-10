@@ -23,7 +23,7 @@ form.addEventListener("submit", function(e){
 
         let save = document.createElement("button");
 
-         let editBox = document.createElement("input");
+        let editBox = document.createElement("input");
 
         //editing text content of new elements
         save.textContent = "save"

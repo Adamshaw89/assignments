@@ -1,0 +1,298 @@
+body{
+    font-family: 'Libre Baskerville', sans-serif;
+    color: #2e484c;
+    background-color: #134347;
+    margin: 0;
+    
+}
+p{
+    padding-left: 50px;
+    padding-right: 30px;
+}
+.container div{
+    padding-top: 30px;
+}
+div h3 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: lighter;
+    font-size: 2em;
+    padding-left: 50px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 200px 1fr 1fr 1fr 200px 200px;
+    
+   
+}
+/* Header */
+.head{
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: normal;
+    background-image: url(http://csszengarden.com/214/contours.png), url(http://csszengarden.com/214/gridlines.png), url(http://csszengarden.com/214/noise.png),url(http://www.csszengarden.com/214/huntington.jpg);
+    text-align: center;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-attachment: fixed, fixed, fixed, scroll;
+
+}
+.head h1{
+    display: inline-block;
+    color: white;
+    font-size: 4em;
+    margin: 0;
+}
+.head h2{
+    font-style: italic;
+    color: rgba(255,255,255,0.6);;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+.brush-stroke{
+    height: 50%;
+    display: inline-block;
+
+}
+/* VIEW ALL ARROW*/
+.view{
+    grid-row: 1/2;
+    grid-column: 2/span;
+    background-image: url(http://csszengarden.com/214/contours.png), url(http://csszengarden.com/214/gridlines.png), url(http://csszengarden.com/214/noise.png),url(http://www.csszengarden.com/214/huntington.jpg);
+    background-attachment: fixed, fixed, fixed, scroll;
+    display: flex;
+    justify-content: center;
+
+}
+.view-all{
+    border: none;
+    font-size: 1em;
+    color: rgba(255,255,255,0.6);
+    background-color: rgba(211, 233, 225, .2);
+    font-weight: lighter;
+    padding: 20px;
+    height: 30%;
+    margin-top: 50px;
+}
+.view-all:hover{
+    background-color: rgba(255, 255, 255, 0.568);
+}
+.arrow{
+    font-size: 3em;
+    color: rgba(255,255,255,0.6);
+    background-color: rgba(211, 233, 225, .2);
+    font-weight: 900;
+    height: 30%;
+    margin-top: 50px;
+    text-decoration: none;
+}
+.arrow:hover{
+    background-color: rgba(255, 255, 255, 0.568);
+}
+
+/* MAIN CONTENT */
+/*FIRST MAIN SECTION*/
+.enlightenment{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: white;
+}
+.enlightenment a{
+    text-decoration: none;
+    color: #a4acae;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.enlightenment a:hover{
+    background-color: #357d93;
+    color: white;
+}
+.download{
+    height: 15px;
+}
+
+/*SECOND MAIN SECTION*/
+.authors {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-row: 2/3;
+    grid-column: 2/span;
+    font-style: italic;
+    color: rgba(150, 146, 146, 0.6);
+    
+}
+.authors li{
+    margin: 5px;
+    list-style: none;
+    border-bottom: solid rgba(185, 179, 179, 0.6) 1px;
+    padding: 5px;
+}
+.project{
+    font-family: 'Julius Sans One', sans-serif;
+    text-decoration: none;
+    color: #2e484c;
+    font-style: normal;
+}
+.project:hover{
+    color: #69a1a1;
+}
+.author-name{
+    text-decoration: none;
+    color: #2e484c;
+    font-style: normal;
+}
+/*THIRD MAIN SECTION*/
+.participation{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    background-image: url(http://csszengarden.com/214/bamboo.png);
+    background-attachment: fixed;
+    background-color: hsl(176deg 100% 99% / 80%);
+}
+.participation a{
+    text-decoration: none;
+}
+/*FOURTH MAIN SECTION*/
+.links {
+   
+    grid-row: 3/4;
+    grid-column: 2/span;
+    background-image: url(http://csszengarden.com/214/bamboo.png);
+    background-attachment: fixed;
+    background-color: rgb(195 243 213 / 60%);
+}
+.links a{
+    font-family: 'Julius Sans One', sans-serif;
+    text-decoration: none;
+    color: #2e484c;
+    font-style: normal;
+}
+.links li{
+    margin: 10px;
+    padding: 5px;
+    list-style: none;
+    border-bottom: solid rgba(114, 112, 112, 0.6) 1px;
+}
+/*FIFTH MAIN SECTION*/
+.requirements{
+    grid-row: 4/5;
+    grid-column: 1/2;
+    background-color: white;
+}
+/*SIXTH MAIN SECTION*/
+.blank{
+    grid-row: 4/5;
+    grid-column: 2/span;
+    background-color: rgba(228, 222, 222, 0.6);
+}
+/* FOOTER*/
+/* FIRST FOOTER SECTION*/
+.footer1 {
+    grid-row: 5/6;
+    background-image:url(http://csszengarden.com/214/contours.png), url(http://csszengarden.com/214/gridlines.png), url(http://csszengarden.com/214/noise.png), url(http://csszengarden.com/214/koi.jpg);
+    background-position:0 0, 0 0, 0 0, center ;
+    background-size: auto, auto, auto, cover;
+    background-attachment: fixed, fixed, fixed, scroll;
+    grid-column: 1/3;
+    text-align: center;
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 1.8em;
+}
+.footer1 a{
+    color: rgba(250, 250, 250, 0.815);
+    text-decoration: none;
+    font-style: normal;
+    
+}
+.footer1 a:hover{
+    text-decoration: underline;
+}
+/*SECOND FOOTER SECTION*/
+.footer2{
+    grid-row: 6/7;
+    grid-column: 1/3;
+    background-color: #134347;
+}
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+.icons img{
+    border-radius: 50%;
+    height:50px;
+    width: 50px;
+    background-color:#134347 ;
+}
+.icons img:hover{
+    background-color: #858b8b;
+}
+.creative{
+    border: solid rgb(101, 103, 105) 2px;
+    color: rgb(101, 103, 105);
+    border-radius: 50%;
+    padding: 10px;
+    text-decoration: none;
+    height: 30px;
+    position: relative;
+    top: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.creative:hover{
+    background-color: #858b8b;
+}
+/* MEDIA RESIZING*/
+@media (max-width: 900px){
+    
+     .container {
+        grid-template-columns:100%; 
+        grid-template-rows: 200px repeat(8, auto);
+    }
+    .head{
+        grid-row: 1/2;
+    }
+    .view{
+        grid-row: 2/3;
+    }
+    .view-all{
+        background-color: inherit;
+        font-size: 1.8em;
+    }
+    .view-all:hover{
+        background-color: inherit;
+    }
+    .arrow{
+        background-color: inherit;
+        font-size: 3.5em;
+    }
+    .arrow:hover{
+        background-color: inherit;
+    }
+    .enlightenment{
+        grid-row: 3/4;
+    }
+    .participation{
+        grid-row: 4/5;
+    }
+    .requirements{
+        grid-row: 5/6;
+    }
+    .footer1{
+        grid-row: 6/7;
+    }
+    .footer2{
+        grid-row: 7/8;
+    }
+    .authors {
+         grid-row: 8/9;
+    }
+    .links {
+        grid-row: 9/10;
+    }
+    
+   
+}
+

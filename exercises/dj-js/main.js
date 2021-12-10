@@ -40,7 +40,7 @@ function green(){
     square.style.backgroundColor = "green";
 }
 
-document.addEventListener("mousewheel", orange);
+document.addEventListener("scroll", orange);
 
 function orange (){
     square.style.backgroundColor = "orange";
@@ -49,13 +49,13 @@ function orange (){
 document.addEventListener("keydown", (event) =>{
     if (event.key === "r" || event.key === "R" ){
         red()
-    } else if (event.key === "b" || event.key === "B"){
+    }else if (event.key === "b" || event.key === "B"){
         blue()
-    }   else if (event.key === "y" || event.key === "Y"){
+    }else if (event.key === "y" || event.key === "Y"){
         yellow()
-        } else if (event.key === "g" || event.key === "G"){
+    }else if (event.key === "g" || event.key === "G"){
             green()
-        }   else if (event.key === "o" || event.key === "O"){
+    }else if (event.key === "o" || event.key === "O"){
                 orange()
             }
 })

@@ -25,19 +25,18 @@ while (locked & isAlive){
         console.log("Why would you reach into a hole? A foot tall Man-Bear-Pig crawls up your arm and bites your head off. You Died.");
         isAlive = false;
         
-    }   else if (options[choice] == 'Look for a key.'){
+    } else if (options[choice] == 'Look for a key.'){
             hasKey = true;
             console.log("That was easy.");
-            
 
-        }    else if (options[choice] == 'Try to open door' & hasKey == false){
-                console.log("The door is obviously locked. Maybe you should look for a key or something?");
-            
-            }  else if (options[choice] == 'Try to open door' & hasKey == true){
-                locked = false; 
-                console.log("You escaped!");
+    } else if (options[choice] == 'Try to open door' & hasKey == false){
+            console.log("The door is obviously locked. Maybe you should look for a key or something?");
+
+    } else if (options[choice] == 'Try to open door' & hasKey == true){
+            locked = false; 
+            console.log("You escaped!");
                                  
-                }
+    }
 
 }
 

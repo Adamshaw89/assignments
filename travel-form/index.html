@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+       
+        <title>Travel Form</title>
+        
+       
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id = "container">
+            <h1>Travel Form</h1>
+            <form name = "form" >
+                <label for="fname">First Name:</label><br>
+                <input name="fname" placeholder="First Name"/><br>
+                <label for="lname">Last Name:</label><br>
+                <input name="lname" placeholder="Last Name"/><br>
+                <label for="age">Age:</label><br>
+                <input type="number" name="age"/><br>
+                <label for="male" >Male</label>
+                <input type="radio" value="male" name = "gender">
+                <label for="female">Female</label>
+                <input type="radio" value="female" name="gender"><br>
+                <label for="destination">Destination:</label><br>
+                <select name="destination">
+                    <option value="nyc">NYC</option>
+                    <option value="london">London</option>
+                    <option value="paris">Paris</option>
+                </select><br>
+                <p class="dietary">Dietary Restrictions:</p>
+                <label for = "gluten-free">Gluten Free</label>
+                <input type="checkbox" class = "gluten-free" name="diet" value="gluten"/>
+                <label for="vegan">Vegan</label>
+                <input type="checkbox" class="vegan1" name="diet" value="vegan"/>
+                <label for="vegatarian">Vegatarian</label>
+                <input type="checkbox" class="vegatarian1" name="diet" value="vegatarian"/><br>
+                <button>Submit</button>
+
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+       
+        
+        <script src="main.js" ></script>
+    </body>
+</html>
