@@ -1,0 +1,128 @@
+* { 
+    margin: 0;
+    padding: 0;
+ }
+body{
+    font-family: 'Roboto', sans-serif;
+ }
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style: none;   
+}
+.page{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+.header{
+    grid-column: 1/4;
+    
+    position: relative;
+    background:linear-gradient(rgba(88, 92, 94, 0.5),rgba(88, 92, 94, 0.5) ), url(https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    margin-top: 0px;
+    padding: 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 20%;
+}
+
+.navLinks{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.mainTitle{
+    font-size: 5em;
+    margin-bottom: 0px;
+}
+
+.titles{
+    margin-bottom: 50px;
+}    
+
+.blog{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+}
+
+.post{
+    padding: 5px;
+    border-bottom: 2px solid lightgray;
+} 
+
+.article{
+    font-size: 2em;
+    color: #212529;
+}
+
+.sub{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.author{
+    font-family: 'Lora', serif;
+    color: lightslategray;
+}
+
+.buttonDiv{
+    grid-column: 2/3;
+    display: flex;
+    justify-content: end;
+    border-bottom: 2px solid lightgray;
+    padding: 10px;
+}
+
+.button{
+    height: 50px;
+    width: 200px;
+    font-size: 1.5em;
+    font-weight: 500;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    
+}
+
+.foot{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/4;
+    text-align: center;
+    padding: 20px;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.icons li img{
+    height: 50px;
+    border-radius: 50%;
+}
+
+.copy{
+    font-family: 'Lora', serif;
+    color: lightslategray;
+}

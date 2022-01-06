@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(6, 16, 33);
+    color: rgb(129, 97, 158);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid purple;
+
+}
+
+.pets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

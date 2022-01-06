@@ -12,15 +12,15 @@ function listData(data){
     
     for(let i = 0; i < data.length; i++){
         // ELEMENT CREATION
-        const h3 = document.createElement('h3')
+        var h3 = document.createElement('h3')
         const li = document.createElement('li')
         const p1 = document.createElement('p');
         const p2 = document.createElement('p');
-        const p3 = document.createElement('p');
+        var p3 = document.createElement('p');
         const image = document.createElement('img');
         let edit = document.createElement('button');
         var del = document.createElement('button');
-        let checker = document.createElement("input");
+        var checker = document.createElement("input");
         let list = document.getElementById("list")
         let id = data[i]._id
         // CREATED ELEMENT ATTRIBUTES AND TEXT CONTENT
@@ -48,18 +48,8 @@ function listData(data){
             list.removeChild(item)
             deleting(id) 
         })
-        checker.addEventListener("click",function(){
-            if (checker.checked){
-                h3.innerHTML = `<strike>${data[i].title}</strike>`
-                p3.textContent = `Completed: true`
-                let complete = {
-                    completed: true
-                }
-                axios.put(`https://api.vschool.io/adamshaw/todo/${id}`, complete)
-                    .then(response => console.log(response.data))
-                    .catch(error => console.log(error))
-            }
-        })
+        
+        
         edit.addEventListener("click", function(){
             edit.remove()
             li.append(save)
@@ -96,7 +86,18 @@ function listData(data){
             .catch(error => console.log(error))
         })
         })
-           
+        checker.addEventListener("click",function(){
+            if (checker.checked){
+                h3.innerHTML = `<strike>${data[i].title}</strike>`
+                p3.textContent = `Completed: true`
+                let complete = {
+                    completed: true
+                }
+                axios.put(`https://api.vschool.io/adamshaw/todo/${id}`, complete)
+                    .then(response => console.log(response.data))
+                    .catch(error => console.log(error))
+            }
+})   
     }}   
 
 // DELETES

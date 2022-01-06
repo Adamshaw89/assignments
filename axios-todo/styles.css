@@ -1,12 +1,14 @@
 body{
     background-color: black;
     color: #48038C;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
 }
 input{
     background-color: rgb(19, 18, 18);
     color: #5204BF;
     box-shadow: .25em .25em .25em #5204BF;
     margin: 5px;
+    display: inline-block;
 }
 button{
     background-color: rgb(19, 18, 18);
@@ -26,6 +28,7 @@ button:hover{
 li{
     text-decoration: none;
     list-style: none;
+    padding-left: -5px;
    
 }
 
@@ -50,8 +53,12 @@ li{
 #head{
     display: flex;
     justify-content: center;
+    text-shadow: .1em .1em .1em #5204BF;
 }
-
+#list-head{
+    display: flex;
+    justify-content: center;
+}
 img{
     height: 100px;
 }
