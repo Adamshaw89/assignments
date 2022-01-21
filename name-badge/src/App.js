@@ -10,7 +10,8 @@ function App() {
     email:"",
     birthPlace:"",
     food:"",
-    bio:""
+    bio:"",
+        
   })
   function handleChange(event){
     const {type, name, value} = event.target
@@ -21,26 +22,43 @@ function App() {
         }
       })
   }
-  let BadgeCard
+  const [Badges, setBadges] = React.useState([
+
+  ])
   function handleSubmit(event){
     event.preventDefault()
-    console.log("hi")
-    BadgeCard = <Badge 
-                  firstName = {formData.firstName}
-                  lastName = {formData.lastName}
-                  phone = {formData.phone}
-                  email = {formData.email}
-                  birthPlace = {formData.birthPlace}
-                  food = {formData.food}
-                  bio = {formData.bio}
-                />
-    
-    console.log(BadgeCard)
-      
+    console.log("submitted")
+     setBadges(prevBadge=>{
+                return[ 
+                  ...prevBadge,
+                  {firstName : formData.firstName,
+                    lastName : formData.lastName,
+                    phone : formData.phone,
+                    email : formData.email,
+                    birthPlace : formData.birthPlace,
+                    food : formData.food,
+                    bio : formData.bio 
+                   }  
+                                             
+                   ]         
+      }) 
+
+      setFormData(prevFormData=>{
+        return{
+        firstName:"",
+        lastName:"",
+        phone:"",
+        email:"",
+        birthPlace:"",
+        food:"",
+        bio:"",
+            
+      }})
+                          
   }
   
   return (
-    <div>
+    <div className="container">
     <form onSubmit ={handleSubmit}>
       <input 
         type="text"
@@ -48,7 +66,8 @@ function App() {
         onChange={handleChange}
         name="firstName"
         value={formData.firstName}
-        
+        minLength="3"
+        required
       />
       <input 
         type="text"
@@ -56,6 +75,8 @@ function App() {
         name="lastName"
         value={formData.lastName}
         onChange={handleChange}
+        minLength="3"
+        required
       />
       <input 
         type="email"
@@ -63,13 +84,19 @@ function App() {
         name="email"
         value={formData.email}
         onChange={handleChange}
+        minLength="3"
+        required
       />
        <input 
-        type="phone"
+        type="tel"
         placeholder="Phone"
         name="phone"
         value={formData.phone}
         onChange={handleChange}
+        pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+        required
+        onInvalid={e => e.target.setCustomValidity('Enter Numbers Only')}
+        onInput={e => e.target.setCustomValidity('')}
       />
       <input 
         type="text"
@@ -77,6 +104,8 @@ function App() {
         name="birthPlace"
         value={formData.birthPlace}
         onChange={handleChange}
+        minLength="3"
+        required
       />
       <input 
         type="text"
@@ -84,17 +113,27 @@ function App() {
         name="food"
         value={formData.food}
         onChange={handleChange}
+        minLength="3"
+        required
       />
       <input 
         type="textarea"
+        className="textBlock"
         placeholder="Tell us about yourself."
         name="bio"
         value={formData.bio}
         onChange={handleChange}
+        minLength="3"
+        required
       />
+      <br/>
       <button>Submit</button>
     </form>
-    {Badge}
+    <ul>
+    <Badge 
+     badges = {Badges}
+    />
+    </ul>
     </div>
   );
 }

@@ -4,7 +4,9 @@ import './App.css';
 
 export default function App() {
   const [colors, setColors] = React.useState(["white", "white", "white", "white"])
+  
   let square = colors.map(color=> <Squares id={colors.indexOf(color)} color={color}/>)
+  
   // handles button click to change colors. Captures button id for if statement.
   function buttons(event){
     let x = event.target.id
